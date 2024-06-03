@@ -2,7 +2,8 @@
 This is a Personal Assistant app that tracks birthdays, to-do lists and contacts. The user is able to add, retrieve and remove birthdays, to-do list items and personal contacts that are stored in json files. This project utilizes OOP (classes, functions, methods) as well as creating, reading and writing to json files. In addition to manual testing, unit testing was done using  ```pytest``` by importing the module ```import pytest```. A testing plan was developed first.
 
 ### Prerequisites
-   - Requires Python versions 3.8.0 or higher. You can download it from [Python.org](https://www.python.org/downloads/). To check the version use ```python3 --version```
+   - Requires Python versions 3.8.0 or higher. You can download it from [Python.org](https://www.python.org/downloads/). To check the version
+     if already installed, use ```python3 --version```
    - Make sure ```pip``` is installed (Python's package manager).
    - It is recommended to use a virtual environment to manage your dependencies.
 

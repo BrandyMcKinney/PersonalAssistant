@@ -22,7 +22,7 @@ while not done:
     1: Add a to-do
     2: Remove a to-do
     3: Get to-do list
-    
+
     **** Birthdays *****
     4: Get Birthday
     5: Add Birthday
@@ -32,9 +32,9 @@ while not done:
     7: Get Contact
     8: Add Contact
     9: Delete Contact
-    
-    Select a number or type 'Exit' to quit: 
-    
+
+    Select a number or type 'Exit' to quit:
+
     """)
 
     match user_command.lower():
@@ -61,8 +61,8 @@ while not done:
                 print(f"\n{k}'s birthday is {v}")
             user_input = input(
                 "\nSelect a name to display only their birthday: ")
-            print(f"\n{user_input}'s birthday is {
-                  assistant.birthdays[user_input]}.")
+            print(f"\n{user_input}'s birthday is \
+                  {assistant.birthdays[user_input]}.")
 
         # Add a birthday
         case "5":
@@ -92,7 +92,7 @@ while not done:
             user_input_name = input(
                 "\nPlease enter the name of your new contact: ")
             user_input_job = input(
-                "Please enter the occupation of your new        contact: ")
+                "Please enter the occupation of your new contact: ")
             print(f"{assistant.add_contact(user_input_name, user_input_job)}")
 
         # Delete a contact
@@ -106,7 +106,7 @@ while not done:
 
         case "exit":
             done = True
-            print("\nGoodbye, see you next time!")
+            print("\nGoodbye,see you next time!")
 
         case _:
             print("\nNot a valid command.")

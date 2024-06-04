@@ -14,8 +14,8 @@ This is a Personal Assistant app that tracks birthdays, to-do lists and contacts
 
 2. **Create Virutal Environment**
    - On macOS and Linux:
-    ```python3 -m venv venv source```
-    ```venv/bin/activate```
+    ```python3 -m venv venv```
+    ```source venv/bin/activate```
      
    - On Windows:
      ```python -m venv venv```

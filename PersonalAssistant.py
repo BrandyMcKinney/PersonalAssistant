@@ -1,25 +1,25 @@
 class PersonalAssistant:
-    def __init__(self, todos, birthdays, contacts):
+    def __init__(self, tasks, birthdays, contacts):
         
-        self.todos = todos
+        self.tasks = tasks
         self.birthdays = birthdays
         self.contacts = contacts
       
-    """To-do List"""      
-    def add_todo(self, new_item):
-        self.todos.append(new_item)
+    """Task List"""      
+    def add_task(self, new_item):
+        self.tasks.append(new_item)
 
-    def remove_todo(self, todo_item):
-        if todo_item in self.todos:
-            # Get the todo_item index in list
-            index = self.todos.index(todo_item)
-            # pop the index for todo_item in todos list
-            self.todos.pop(index)
+    def remove_task(self, task_item):
+        if task_item in self.tasks:
+            # Get the task_item index in list
+            index = self.tasks.index(task_item)
+            # pop the index for task_item in todos list
+            self.tasks.pop(index)
         else:
-            return "Todo is not in list!"
+            return "The task is not in the list!"
 
-    def get_todos(self):
-        return self.todos
+    def get_tasks(self):
+        return self.tasks
       
     """Birthdays"""      
     def get_birthdays(self):

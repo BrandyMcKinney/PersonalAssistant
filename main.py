@@ -1,6 +1,6 @@
 # imports PersonalAssistant.py file
 import json
-from PersonalAssistant import PersonalAssistant
+from personal_assistant import PersonalAssistant
 
 # ADD CODE: open JSON file and pass data to PersonalAssistant class
 with open("tasks.json", "r") as tasks, open("birthdays.json", "r") as birthdays, open("contacts.json", "r") as contacts:

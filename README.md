@@ -29,3 +29,8 @@ This is a Personal Assistant app that tracks birthdays, to-do lists and contacts
 4. **Using the App**
    - Open the directory in your code editor of choice and run the app using  ```python3 main.py```
    - Follow the prompts and have fun!
+
+5. **Running Tests**
+   - `pytest -v` prints out test case names
+   - `pytest -s` prints out the print statements
+   - `pytest -m <name of marker>` runs tests that include marker

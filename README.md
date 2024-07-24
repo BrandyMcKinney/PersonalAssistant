@@ -26,6 +26,11 @@ This is a Personal Assistant app that tracks birthdays, tasks and contacts. The 
 3. **Install the dependencies**
    - `pip install -r requirements.txt`
 
-4. **Using the App**
+4. **Running Tests**
+   - `pytest -v` verbose output for pytest
+   - `pytest -m` selecting tests by marker
+   - `pytest -s` instructs pytest to capture and print the stdout & stderr
+
+5. **Using the App**
    - Open the directory in your code editor of choice and run the app using  ```python3 main.py```
    - Follow the prompts and have fun!

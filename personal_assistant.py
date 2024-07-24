@@ -21,7 +21,7 @@ class PersonalAssistant:
             # pop the index for task_item in todos list
             self.tasks.pop(index)
         else:
-            return "The task is not in the list!"
+            return "The task is not in list!"
 
     def get_tasks(self):
         return self.tasks
@@ -48,6 +48,8 @@ class PersonalAssistant:
         if name in self.birthdays:
             self.birthdays.pop(name)
             return f"{name} has been removed."
+        else:
+            return "The birthday for the given name could not be found"
 
     """Contacts """
 
@@ -71,3 +73,5 @@ class PersonalAssistant:
         if name in self.contacts:
             self.contacts.pop(name)
             return f"\n{name} has been removed from your contacts."
+        else:
+            return f"\n{name} is not in your contacts list."

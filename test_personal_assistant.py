@@ -48,6 +48,7 @@ def test_add_task_invalid_type(assistant):
 
 
 # Test remove_task
+@pytest.mark.smoke(reason="Delete task functionality is important")
 @pytest.mark.tasks_component
 def test_remove_task(assistant):
     assistant.remove_task("Finish report")
@@ -85,6 +86,7 @@ def test_add_birthday_duplicate(assistant):
 
 
 # Test remove_birthday
+@pytest.mark.smoke(reason="Delete birthday functionality is important")
 @pytest.mark.birthdays_component
 def test_remove_birthday(assistant):
     assistant.remove_birthday("Bob")
@@ -128,6 +130,7 @@ def test_add_contact_duplicate(assistant):
 
 
 # Test remove_contact
+@pytest.mark.smoke(reason="Delete contact functionality is important")
 @pytest.mark.contacts_component
 def test_remove_contact(assistant):
     assistant.remove_contact("David")

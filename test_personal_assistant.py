@@ -76,6 +76,16 @@ def test_add_birthday(assistant):
     assert assistant.get_birthdays()["Emily"] == "03/28/1998"
 
 
+@pytest.mark.smoke(reason="Input must be a string")
+@pytest.mark.birthdays_component
+@pytest.mark.debug
+@pytest.mark.parametrize("name, birthday", [("Brandy", 1/1/1985), ("Shawn", 2/2/1970), ("Brooke", 3/3/2000)])
+def test_add_birthday_invalid_type(assistant, name, birthday):
+    with pytest.raises(TypeError) as excinfo:
+        assistant.add_birthday(name, birthday)  # Expect a TypeError for non-string input
+    assert "Name and date must be a string" in str(excinfo.value)
+    
+
 @pytest.mark.smoke(reason="One birthdate per person")
 @pytest.mark.birthdays_component
 @pytest.mark.duplicates
@@ -121,9 +131,10 @@ def test_add_contact(assistant):
     assistant.add_contact("Eve", "Web Developer")
     assert assistant.get_contacts()["Eve"] == "Web Developer"
 
-
+#test add_contact_duplicate
 @pytest.mark.smoke(reason="No duplicates")
 @pytest.mark.contacts_component
+@pytest.mark.duplicates
 def test_add_contact_duplicate(assistant):
     assert assistant.add_contact(
         "Anita", "Designer") == "\nAnita is already a contact."
@@ -156,3 +167,10 @@ def test_get_contact(assistant):
 def test_get_contact_not_found(assistant):
     assert assistant.get_contact(
         "Henry") == "Henry is not in your contact list."
+    
+
+@pytest.mark.debug
+@pytest.mark.parametrize("first_name, last_name", [("Brandy", "McKinney"),("Brooke", "McKinney"), ("Shawn", "Bacot")])
+def test_print_fullname(first_name, last_name):
+    print(first_name, last_name)
+

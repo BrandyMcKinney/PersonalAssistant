@@ -1,5 +1,5 @@
 from .personal_assistant import PersonalAssistant
-import pytest
+import pytest # type: ignore
 import json
 
 # Sample data for tests generated from AI

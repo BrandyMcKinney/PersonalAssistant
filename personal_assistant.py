@@ -38,11 +38,16 @@ class PersonalAssistant:
             return "The birthday for the given name could not be found"
 
     def add_birthday(self, name, date):
-        if name in self.birthdays:
-            return f"A birthday already exists for {name}."
-        else:
-            self.birthdays[name] = date
-            return f"{name} has been added to your birthday list"
+        try:
+            assert type(name) is str
+            assert type(date) is str
+            if name in self.birthdays:
+                return f"A birthday already exists for {name}."
+            else:
+                self.birthdays[name] = date
+                return f"{name} has been added to your birthday list"
+        except:
+            raise TypeError("Name and date must be a string")
 
     def remove_birthday(self, name):
         if name in self.birthdays:
